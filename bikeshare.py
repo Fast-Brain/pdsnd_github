@@ -40,12 +40,6 @@ def get_month(prompt):
            (str) prompt - user input for the month to filter
        Returns:
            (str) value - name of the month to filter by, or "all" to apply no month filter
-
-       get_day()
-       Args:
-           (str) prompt - user input for day of week to filter
-       Returns:
-           (str) value - name of the day of week to filter by, or "all" to apply no day filter
     """
     while True:
         try:
@@ -96,7 +90,6 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    print('\nLoading statistics... please wait!')
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -211,14 +204,14 @@ def user_stats(df):
     # Display counts of user types
     user_types = df['User Type'].value_counts()
 
-    print('What is the breakdown of user?\n')
+    print('Breakdown of users\n')
     print(user_types)
 
     # Display counts of gender
     try:
         gender = df['Gender'].value_counts()
 
-        print('\nWhat is the breakdown of gender?\n')
+        print('\nBreakdown of gender\n')
         print(gender)
     except KeyError:
         print('Oops! Gender is not available in this city...\n')
@@ -229,11 +222,13 @@ def user_stats(df):
         most_recent_dob = df['Birth Year'].max()
         most_popular_dob = df['Birth Year'].mode()[0]
 
-        print('\nWhat is the oldest, youngest, and most Popular Year of Birth?')
-        print('{}, {}, {}'.format(earliest_dob, most_recent_dob, most_popular_dob))
+        print('\nBreakdown of Year of Birth\n')
+        print('Most Popular year: {}'.format(most_popular_dob))
+        print('Oldest year: {}'.format(earliest_dob))
+        print('Youngest year: {}'.format(most_recent_dob))
 
         print("\nThis took %s seconds." % (time.time() - start_time))
-        print()
+        print('-' * 40)
     except KeyError:
         print('Oops! Birth Year is not available in this city...\n')
     print('-' * 40)
@@ -276,7 +271,6 @@ def main():
         print('\nWhich day would you like to filter data for?')
         print('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday Sunday or "all" to apply no day filter')
         day = get_day("Please enter the day: ")
-        print('-' * 40)
 
         df = load_data(city, month, day)
 
