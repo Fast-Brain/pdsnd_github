@@ -55,4 +55,8 @@ You will learn about bike share use in Chicago, New York City, and Washington by
 1. earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
 ### Credits
-It's important to give proper credit.
+* **[Stackoverflow](https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response?answertab=votes#tab-top)
+* **[Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#attributes-and-underlying-data)
+* **[pycodestyle.pycqa.org](http://pycodestyle.pycqa.org/en/latest/intro.html#error-codes)
+* **[geeksforgeeks.org](https://www.geeksforgeeks.org/python-pandas-dataframe-to_dict/)
+* **[pandas.pydata.org](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_dict.html#pandas.DataFrame.to_dict)
