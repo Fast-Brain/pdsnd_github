@@ -123,18 +123,18 @@ def time_stats(df):
     using mode()[0] takes the first return mode value each time
     """
 
-    print('\nCalculating The Most Frequent Times of Travel...\n')
+    print('\nCalculating the most frequent times of travel...\n')
     start_time = time.time()
 
     # display the most common month
     popular_month = df['month'].mode()[0]
 
-    print('Most Popular Month:', popular_month)
+    print('Most popular month:', popular_month)
 
     # display the most common day of week
     popular_dow = df['day_of_week'].mode()[0]
 
-    print('Most Popular Day of Week:', popular_dow)
+    print('Most popular day of week:', popular_dow)
 
     # display the most common start hour
     # extract hour from the Start Time column to create an hour column
@@ -143,7 +143,7 @@ def time_stats(df):
     # find the most popular hour
     popular_hour = df['hour'].mode()[0]
 
-    print('Most Popular Start Hour:', popular_hour)
+    print('Most popular start hour:', popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
