@@ -178,18 +178,18 @@ def station_stats(df):
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
-    print('\nCalculating Trip Duration...\n')
+    print('\nCalculating trip duration...\n')
     start_time = time.time()
 
     # display total travel time
     total_travel_time = df['Trip Duration'].sum()
 
-    print('Total Trip Duration:', total_travel_time)
+    print('Total trip duration:', total_travel_time)
 
     # display mean travel time
     average_travel_time = df['Trip Duration'].mean()
 
-    print('Average Trip Duration:', average_travel_time)
+    print('Average trip duration:', average_travel_time)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
@@ -271,6 +271,7 @@ def main():
         print('\nWhich day would you like to filter data for?')
         print('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday Sunday or "all" to apply no day filter')
         day = get_day("Please enter the day: ")
+        print('-' * 40)
 
         df = load_data(city, month, day)
 
