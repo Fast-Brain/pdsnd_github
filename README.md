@@ -31,24 +31,24 @@ The Chicago and New York City files also have the following two columns:
 ### Statistics Computed
 You will learn about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics. In this project, you'll write code to provide the following information:
 
-#####1 Popular times of travel (i.e., occurs most often in the start time)**
+##### 1 Popular times of travel (i.e., occurs most often in the start time)**
 
 1. most common month
 1. most common day of week
 1. most common hour of day
 
-#####2 Popular stations and trip**
+##### 2 Popular stations and trip**
 
 1. most common start station
 1. most common end station
 1. most common trip from start to end (i.e., most frequent combination of start station and end station)
 
-#####3 Trip duration**
+##### 3 Trip duration**
 
 1. total travel time
 1. average travel time
 
-#####4 User info**
+##### 4 User info**
 
 1. counts of each user type
 1. counts of each gender (only available for NYC and Chicago)
